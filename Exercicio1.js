@@ -1,5 +1,7 @@
 function receberParametros(valorDoBoleto, dias) {
-    novoValor = valorDoBoleto / (0.033 * dias);
+    let jurosDiario = 100 / (0.033 * valorDoBoleto);
+    let jurosTotal = jurosDiario * dias;
+    let novoValor = valorDoBoleto + jurosTotal;
     return novoValor;
 }
 console.log(receberParametros(2, 15));
