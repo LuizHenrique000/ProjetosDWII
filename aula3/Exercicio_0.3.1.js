@@ -19,9 +19,10 @@ const filmes = [
     }
 ]
 const tituloEAno = filmes.map(myFunction);
+
 function myFunction(filmes) {
     const objeto = {
-        diretores: filmes.diretores,
+        nomes: filmes.nome,
         lancamento: filmes.lancamento
     };
     return objeto;
@@ -29,6 +30,7 @@ function myFunction(filmes) {
 console.log(tituloEAno);
 
 const arrayComId = filmes.map(myFunction2);
+
 function myFunction2(filmes, index) {
     const objeto = {
         nome: filmes.nome,
@@ -40,3 +42,4 @@ function myFunction2(filmes, index) {
     return objeto;
 }
 console.log(arrayComId)
+//Eu arrumei a const porque estava trazendo os diretores ao invés dos nomes :)
