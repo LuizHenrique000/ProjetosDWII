@@ -7,16 +7,20 @@ const sistema = {
     , postagens: [
         { postagem: 'Hoje o dia está bonito', idPostagem: 0, idAutores: 0, publicado: true },
         { postagem: 'Hoje o dia não está bonito', idPostagem: 1, idAutores: 1, publicado: true },
-        { postagem: 'Hoje o dia está uma bela bo$&#', idPostagem: 2, idAutores: 2, publicado: false }
+        { postagem: 'Hoje o dia está uma bela bo$&#', idPostagem: 2, idAutores: 2, publicado: false },
+        { postagem: 'Você não pode reclamar do dia', idPostagem: 3, idAutores: 1, publicado: false }
 
     ]
 }
-// const publicar = sistema.postagens.find(publicado) =>
-//     if (publicado == false) {
-//         publicadado = true;
-//     } 
-// }
-// Testando
 
 
-console.log(publicar)
+const statusDaPostagem = sistema.postagens.find(myFunction);
+function myFunction(postagem) {
+    return postagem.publicado == false;
+}
+const publicarPostagens = sistema.postagens.map(myFunction2);
+function myFunction2(postagem) {
+    return postagem.publicado = true;
+}
+
+console.log(sistema);
