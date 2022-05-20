@@ -20,10 +20,10 @@ const filmes = [
 ]
 const tituloEAno = filmes.map(myFunction);
 
-function myFunction(filmes) {
+function myFunction(filme) {
     const objeto = {
-        nomes: filmes.nome,
-        lancamento: filmes.lancamento
+        nomes: filme.nome,
+        lancamento: filme.lancamento
     };
     return objeto;
 }
@@ -31,15 +31,11 @@ console.log(tituloEAno);
 
 const arrayComId = filmes.map(myFunction2);
 
-function myFunction2(filmes, index) {
+function myFunction2(filme, index) {
     const objeto = {
-        nome: filmes.nome,
-        lancamento: filmes.lancamento,
-        diretores: filmes.diretores,
-        generos: filmes.generos,
+        ...filme,
         id: index
     };
     return objeto;
 }
-console.log(arrayComId)
-//Eu arrumei a const porque estava trazendo os diretores ao invés dos nomes :)
+console.log(arrayComId);
