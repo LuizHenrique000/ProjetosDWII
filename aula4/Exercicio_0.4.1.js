@@ -22,9 +22,12 @@ const alunos = [
     }
 ]
 
+
 const mediaGeral = alunos.map(myFunction);
 function myFunction(alunos) {
-    const media = alunos.notas.reduce((acumulador, proximoValor) => { }, 0)
+    const media = alunos.notas.reduce((acumulador, proximoValor) => { acumulador + proximoValor }, 0)
     alunos.mediaGeral = media;
+
 }
 console.log(alunos)
+// A mediaGeral está retornando undefined :(
