@@ -21,13 +21,10 @@ const alunos = [
         ],
     }
 ]
+const notasTotais = alunos
+    .map((item) => item.notas)
+    .map((item) => item[0].nota + item[1].nota)
+    .map((item) => item / 2)
 
-
-const mediaGeral = alunos.map(myFunction);
-function myFunction(alunos) {
-    const media = alunos.notas.reduce((acumulador, proximoValor) => { acumulador + proximoValor }, 0)
-    alunos.mediaGeral = media;
-
-}
 console.log(alunos)
-// A mediaGeral está retornando undefined :(
+//Eu consegui achar o cálculo da média mas não consigo colocar a propriedade mediaGeral com os valores
