@@ -25,6 +25,7 @@ const notasTotais = alunos
     .map((item) => item.notas)
     .map((item) => item[0].nota + item[1].nota)
     .map((item) => item / 2)
+alunos.mediaGeral = notasTotais
 
 console.log(alunos)
-//Eu consegui achar o cálculo da média mas não consigo colocar a propriedade mediaGeral com os valores
+
