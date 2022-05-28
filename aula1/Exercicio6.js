@@ -11,6 +11,7 @@ const anosIguais = (ano) => {
             contador++;
         }
     }
+
     return contador
 }
 console.log(anosIguais(2012))
