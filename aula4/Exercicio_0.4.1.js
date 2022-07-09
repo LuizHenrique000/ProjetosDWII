@@ -23,9 +23,7 @@ const alunos = [
 ]
 const notasTotais = alunos
     .map((item) => item.notas)
-    .map((item) => item[0].nota + item[1].nota)
-    .map((item) => item / 2)
-alunos.mediaGeral = notasTotais
+    .map((itens) => itens.reduce((acc, { nota }) => acc + nota, 0))
 
-console.log(alunos)
+console.log(alunos[0])
 

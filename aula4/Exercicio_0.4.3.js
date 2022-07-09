@@ -23,11 +23,6 @@ const arquivos = [
 
 const inverterValor = arquivos.forEach(myFunction);
 function myFunction(arquivos) {
-    if (arquivos.excluido === false) {
-        arquivos.excluido = true;
-    }
-    else if (arquivos.excluido === true) {
-        arquivos.excluido = false;
-    }
+    arquivos.excluido = !arquivos.excluido
 }
 console.log(arquivos)

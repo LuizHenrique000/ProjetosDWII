@@ -17,9 +17,9 @@ const medicos = [
     },
 ];
 
-const nomeCorreto = medicos.map(myFunction);
+const nomeCorreto = medicos.map(apresentacaoPorGenero);
 
-function myFunction(medicos) {
+function apresentacaoPorGenero(medicos) {
     if (medicos.genero === 'masculino') {
         return `Dr ${medicos.nome} ${medicos.sobrenome}`
     }
